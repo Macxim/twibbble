@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html class="antialiased bg-blue-50" lang="en">
+  <head>
+    <title>CRM App by Karol Kos</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet"> 
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="">
+    <div class="flex h-screen overflow-hidden bg-gray-100">
+      <div class="hidden md:flex md:flex-shrink-0">
+        <div class="flex flex-col w-56">
+          <!-- Sidebar component -->
+          <div class="flex flex-col flex-grow pt-5 pb-4 overflow-y-auto bg-white">
+            <div class="flex items-center justify-center flex-shrink-0 px-4">
+              <div class="flex items-center justify-center bg-gray-200 rounded-lg w-14 h-14">
+                <div class="flex items-center justify-center p-1 bg-blue-500 rounded-lg w-7 h-7">
+                  <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" viewBox="0 -5 1025 1024"><path d="M800.407 448h-96v128h96q93 0 158.5 65.5t65.5 158.5t-65.5 158.5t-158.5 65.5t-158.5-65.5t-65.5-158.5v-96h-128v96q0 93-65.5 158.5t-158.5 65.5t-158.5-65.5T.407 800t65.5-158.5t158.5-65.5h96V448h-96q-93 0-158.5-65.5T.407 224t65.5-158.5T224.407 0t158.5 65.5t65.5 158.5v96h128v-96q0-93 65.5-158.5T800.407 0t158.5 65.5t65.5 158.5t-65.5 158.5t-158.5 65.5zm-96 352q0 40 28 68t68 28t68-28t28-68t-28-68t-68-28h-64q-13 0-22.5 9.5t-9.5 22.5v64zm-384-576q0-40-28-68t-68-28t-68 28t-28 68t28 68t68 28h64q13 0 22.5-9.5t9.5-22.5v-64zm0 512q0-13-9.5-22.5t-22.5-9.5h-64q-40 0-68 28t-28 68t28 68t68 28t68-28t28-68v-64zm256-288h-128v128h128V448zm224-320q-40 0-68 28t-28 68v64q0 13 9.5 22.5t22.5 9.5h64q40 0 68-28t28-68t-28-68t-68-28z" fill="currentColor"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1">
+              <span class="w-full px-8 mx-auto my-16 rounded-md">
+                <button type="button" class="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-5 text-white transition duration-150 ease-in-out bg-blue-600 border border-transparent rounded-md shadow-md hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700">
+                  Request for
+                </button>
+              </span>
+              <nav class="flex-1 space-y-3 bg-white">
+                <a href="#" class="flex items-center px-8 py-2 mt-1 text-sm font-bold leading-5 transition duration-150 ease-in-out text-cool-gray-500 group focus:text-blue-900 hover:text-blue-900 focus:outline-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-6 h-6 mr-3 transition duration-150 ease-in-out text-cool-gray-400 group-hover:text-blue-600 group-focus:text-blue-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path d="M24 21h2v5h-2z" fill="currentColor"></path><path d="M20 16h2v10h-2z" fill="currentColor"></path><path d="M11 26a5.006 5.006 0 0 1-5-5h2a3 3 0 1 0 3-3v-2a5 5 0 0 1 0 10z" fill="currentColor"></path><path d="M28 2H4a2.002 2.002 0 0 0-2 2v24a2.002 2.002 0 0 0 2 2h24a2.003 2.003 0 0 0 2-2V4a2.002 2.002 0 0 0-2-2zm0 9H14V4h14zM12 4v7H4V4zM4 28V13h24l.002 15z" fill="currentColor"></path></svg>
+                  Dashboard
+                </a>
+                <a href="#" class="flex items-center px-8 py-2 mt-1 text-sm font-bold leading-5 text-blue-900 transition duration-150 ease-in-out group focus:outline-none bg-gradient-to-r from-cool-gray-100">
+                  <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm"></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-6 h-6 mr-3 text-blue-600 transition duration-150 ease-in-out group-hover:text-blue-600 group-focus:text-blue-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path d="M30 30h-2v-5a5.006 5.006 0 0 0-5-5v-2a7.008 7.008 0 0 1 7 7z" fill="currentColor"></path><path d="M22 30h-2v-5a5.006 5.006 0 0 0-5-5H9a5.006 5.006 0 0 0-5 5v5H2v-5a7.008 7.008 0 0 1 7-7h6a7.008 7.008 0 0 1 7 7z" fill="currentColor"></path><path d="M20 2v2a5 5 0 0 1 0 10v2a7 7 0 0 0 0-14z" fill="currentColor"></path><path d="M12 4a5 5 0 1 1-5 5a5 5 0 0 1 5-5m0-2a7 7 0 1 0 7 7a7 7 0 0 0-7-7z" fill="currentColor"></path></svg>
+                  People
+                </a>
+                <a href="#" class="flex items-center px-8 py-2 mt-1 text-sm font-bold leading-5 transition duration-150 ease-in-out text-cool-gray-500 group focus:text-blue-900 hover:text-blue-900 focus:outline-none">
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-6 h-6 mr-3 transition duration-150 ease-in-out text-cool-gray-400 group-hover:text-blue-600 group-focus:text-blue-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path d="M2 22h28v2H2z" fill="currentColor"></path><path d="M2 26h28v2H2z" fill="currentColor"></path><path d="M24 10a2 2 0 1 0 2 2a2 2 0 0 0-2-2z" fill="currentColor"></path><path d="M16 16a4 4 0 1 1 4-4a4.005 4.005 0 0 1-4 4zm0-6a2 2 0 1 0 2 2a2.002 2.002 0 0 0-2-2z" fill="currentColor"></path><path d="M8 10a2 2 0 1 0 2 2a2 2 0 0 0-2-2z" fill="currentColor"></path><path d="M28 20H4a2.005 2.005 0 0 1-2-2V6a2.005 2.005 0 0 1 2-2h24a2.005 2.005 0 0 1 2 2v12a2.003 2.003 0 0 1-2 2zm0-14H4v12h24z" fill="currentColor"></path></svg>
+                  Finances
+                </a>
+                <a href="#" class="flex items-center px-8 py-2 mt-1 text-sm font-bold leading-5 transition duration-150 ease-in-out text-cool-gray-500 group focus:text-blue-900 hover:text-blue-900 focus:outline-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-6 h-6 mr-3 transition duration-150 ease-in-out text-cool-gray-400 group-hover:text-blue-600 group-focus:text-blue-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path d="M13 30a11 11 0 0 1 0-22a1 1 0 0 1 1 1v9h9a1 1 0 0 1 1 1a11 11 0 0 1-11 11zm-1-19.94A9 9 0 1 0 21.94 20H14a2 2 0 0 1-2-2z" fill="currentColor"></path><path d="M28 14h-9a2 2 0 0 1-2-2V3a1 1 0 0 1 1-1a11 11 0 0 1 11 11a1 1 0 0 1-1 1zm-9-2h7.94A9 9 0 0 0 19 4.06z" fill="currentColor"></path></svg>
+                  Statistics
+                </a>
+                <a href="#" class="flex items-center px-8 py-2 mt-1 text-sm font-bold leading-5 transition duration-150 ease-in-out text-cool-gray-500 group focus:text-blue-900 hover:text-blue-900 focus:outline-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-6 h-6 mr-3 transition duration-150 ease-in-out text-cool-gray-400 group-hover:text-blue-600 group-focus:text-blue-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path d="M25.7 9.3l-7-7c-.2-.2-.4-.3-.7-.3H8c-1.1 0-2 .9-2 2v24c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V10c0-.3-.1-.5-.3-.7zM18 4.4l5.6 5.6H18V4.4zM24 28H8V4h8v6c0 1.1.9 2 2 2h6v16z" fill="currentColor"></path><path d="M10 22h12v2H10z" fill="currentColor"></path><path d="M10 16h12v2H10z" fill="currentColor"></path></svg>
+                  Documents
+                </a>
+                <a href="#" class="flex items-center px-8 py-2 mt-1 text-sm font-bold leading-5 transition duration-150 ease-in-out text-cool-gray-500 group focus:text-blue-900 hover:text-blue-900 focus:outline-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-6 h-6 mr-3 transition duration-150 ease-in-out text-cool-gray-400 group-hover:text-blue-600 group-focus:text-blue-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path d="M26 4h-4V2h-2v2h-8V2h-2v2H6c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 22H6V12h20v14zm0-16H6V6h4v2h2V6h8v2h2V6h4v4z" fill="currentColor"></path></svg>
+                  Calendar
+                </a>
+              </nav>
+              <div>
+                <a href="#" class="flex items-center px-8 py-2 text-sm font-bold leading-5 transition duration-150 ease-in-out text-cool-gray-500 group focus:text-blue-900 hover:text-blue-900 focus:outline-none md:mb-12">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-6 h-6 mr-3 transition duration-150 ease-in-out text-cool-gray-400 group-hover:text-blue-600 group-focus:text-blue-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path d="M25 10h-.06a9 9 0 0 0-17.88 0H7a5 5 0 0 0 0 10h2v-9a7 7 0 0 1 14 0v10a4 4 0 0 1-3.17 3.91a4 4 0 1 0 .05 2A6 6 0 0 0 25 21v-1a5 5 0 0 0 0-10zM4 15a3 3 0 0 1 3-3v6a3 3 0 0 1-3-3zm12 13a2 2 0 1 1 2-2a2 2 0 0 1-2 2zm9-10v-6a3 3 0 0 1 0 6z" fill="currentColor"></path></svg>
+                  Support
+                </a>
+                <button type="button" class="flex items-center justify-center px-4 py-3 mx-auto text-base font-medium leading-5 text-white transition duration-150 ease-in-out bg-blue-600 border border-transparent rounded-full shadow-md w-14 h-14 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-6 h-6 transition duration-150 ease-in-out" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path d="M22.5 5.74l-1 1.73a11 11 0 1 1-11 0l-1-1.73a13 13 0 1 0 13 0z" fill="currentColor"></path><path d="M15 2h2v14h-2z" fill="currentColor"></path></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col flex-1 w-0 overflow-hidden border-l border-gray-200">
+        <div class="relative z-10 flex flex-shrink-0 h-20 bg-white shadow">
+          <button class="px-4 text-gray-500 border-r border-gray-200 focus:outline-none focus:bg-gray-100 focus:text-gray-600 md:hidden" aria-label="Open sidebar">
+            <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </button>
+          <div class="flex justify-between flex-1 px-4">
+            <div class="flex items-center flex-1">
+              <form class="flex w-full md:ml-0" action="#" method="GET">
+                <label for="search_field" class="sr-only">Search</label>
+                <div class="relative w-full ml-4 text-gray-400 border rounded-md focus-within:text-gray-600 border-cool-gray-200">
+                  <input id="search_field" class="block w-full py-2 pl-3 pr-10 text-gray-900 placeholder-gray-500 rounded-md focus:outline-none focus:placeholder-gray-400 sm:text-sm" placeholder="Search" type="search">
+                  <div class="absolute inset-y-0 right-0 flex items-center mx-3 pointer-events-none">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />
+                    </svg>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="flex items-center ml-4 md:ml-6">
+              <span class="ml-16 mr-4 text-sm font-bold text-blue-900">August 29th, 2020</span>
+
+              <button class="relative p-1 text-gray-400 rounded-full hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:shadow-outline focus:text-gray-500" aria-label="Notifications">
+                <div class="w-5 h-5 flex items-center justify-center absolute z-10 py-0.5 px-1 rounded-full text-xs font-medium leading-4 text-white bg-blue-600 border-2 border-white" style="top: -4px; right: -4px;">2</div>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-6 h-6" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path d="M28.7 20.3L26 17.6V13a10.07 10.07 0 0 0-9-10V1h-2v2a10.15 10.15 0 0 0-9 10v4.6l-2.7 2.7a.91.91 0 0 0-.3.7v3a.94.94 0 0 0 1 1h7a5 5 0 0 0 10 0h7a.94.94 0 0 0 1-1v-3a.91.91 0 0 0-.3-.7zM16 28a3 3 0 0 1-3-3h6a3 3 0 0 1-3 3zm11-5H5v-1.6l2.7-2.7A.91.91 0 0 0 8 18v-5a8 8 0 0 1 16 0v5a.91.91 0 0 0 .3.7l2.7 2.7z" fill="currentColor"></path></svg>
+              </button>
+
+              <!-- Profile dropdown -->
+              <div class="relative ml-4">
+                <div class="flex items-center">
+                  <button class="flex items-center max-w-xs text-sm rounded-full focus:outline-none focus:shadow-outline" id="user-menu" aria-label="User menu" aria-haspopup="true">
+                    <span class="text-sm font-bold text-blue-900">Marty Byrde</span>
+                    <img class="w-8 h-8 mx-4 rounded-full" src="https://i.pravatar.cc/150?img=20" alt="">
+                    <svg class="w-4 h-4 mr-3 transition duration-150 ease-in-out text-cool-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <main class="relative z-0 flex-1 h-full overflow-y-auto focus:outline-none" tabindex="0">
+          <div class="flex">
+            <div class="w-full md:w-3/4">
+              <div class="pt-2 pb-6 md:py-6">
+                <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
+                  <h1 class="text-2xl font-semibold text-blue-900">People</h1>
+                  <div class="md:float-right">
+                    <form class="flex w-full md:ml-0" action="#" method="GET">
+                      <label for="search_field_by_name" class="sr-only">Search</label>
+                      <div class="relative w-full text-gray-400 rounded-md focus-within:text-gray-600">
+                        <input id="search_field_by_name" class="block w-full py-2 pl-3 pr-10 text-gray-900 placeholder-gray-500 border rounded-md border-cool-gray-300 bg-cool-gray-200 focus:outline-none focus:placeholder-gray-400 sm:text-sm" placeholder="Search" type="search">
+                        <div class="absolute inset-y-0 right-0 flex items-center mx-3 pointer-events-none">
+                          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
+                  <div>
+                    <div class="sm:hidden">
+                      <select aria-label="Selected tab" class="block w-full py-2 pl-3 pr-10 mt-1 text-base leading-6 transition duration-150 ease-in-out border-blue-300 form-select focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
+                        <option selected>All</option>
+                        <option>Organization</option>
+                      </select>
+                    </div>
+                    <div class="hidden sm:block">
+                      <div class="border-b border-gray-200">
+                        <nav class="flex -mb-px">
+                          <a href="#" class="relative px-1 py-4 text-sm font-bold leading-5 text-blue-900 whitespace-no-wrap focus:outline-none focus:text-blue-800 focus:border-blue-700" aria-current="page">
+                            All
+                            <div class="absolute bottom-0 left-0 w-full h-1 bg-blue-600 rounded-sm"></div>
+                          </a>
+                          <a href="#" class="px-1 py-4 ml-8 text-sm font-medium leading-5 whitespace-no-wrap border-b-2 border-transparent text-cool-gray-400 hover:text-blue-900 focus:outline-none focus:text-blue-900">
+                            Organization
+                          </a>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="sm:hidden">
+                      <select aria-label="Selected tab" class="block w-full py-2 pl-3 pr-10 mt-1 text-base leading-6 transition duration-150 ease-in-out border-blue-300 form-select focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
+                        <option selected>Design team</option>
+                        <option>HR team</option>
+                        <option>Marketing team</option>
+                      </select>
+
+                      <select aria-label="Selected tab" class="block w-full py-2 pl-3 pr-10 mt-1 text-base leading-6 transition duration-150 ease-in-out border-blue-300 form-select focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
+                        <option selected>Position</option>
+                        <option>Senior Engineer</option>
+                        <option>UI Developer</option>
+                      </select>
+
+                      <select aria-label="Selected tab" class="block w-full py-2 pl-3 pr-10 mt-1 text-base leading-6 transition duration-150 ease-in-out border-blue-300 form-select focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
+                        <option selected>More</option>
+                        <option>More option 1</option>
+                        <option>More option 2</option>
+                      </select>
+                    </div>
+                    <div class="hidden mt-6 sm:block">
+                      <div class="flex flex-col flex-wrap items-center space-y-3 lg:flex-row lg:space-x-3 xl:space-y-0">
+                        <div class="flex flex-col items-center flex-1 w-full space-y-3 lg:space-x-3 lg:space-y-0 lg:flex-row">
+                          <button type="button" class="relative w-full py-2 pl-4 pr-10 text-sm font-semibold text-left text-blue-500 bg-blue-200 border border-transparent rounded-md shadow-md lg:w-40 focus:outline-none hover:shadow-none focus:shadow-outline-blue focus:border-blue-400">
+                            Design team
+                            <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="inline w-5 h-5 text-blue-500" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="transform: rotate(360deg);"><path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6l1.41-1.42z" fill="currentColor"></path></svg>
+                            </div>
+                          </button>
+  
+                          <button type="button" class="relative w-full py-2 pl-4 pr-10 text-sm font-semibold text-left text-gray-500 transition duration-200 ease-in border border-gray-300 rounded-md shadow-md lg:w-40 bg-gray-50 hover:bg-gray-100 focus:outline-none hover:shadow-none focus:shadow-outline-blue focus:border-blue-400">
+                            Postion
+                            <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="inline w-5 h-5 ml-4 text-gray-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="transform: rotate(360deg);"><path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6l1.41-1.42z" fill="currentColor"></path></svg>
+                            </div>
+                          </button>
+  
+                          <button type="button" class="relative w-full py-2 pl-4 pr-10 text-sm font-semibold text-left text-gray-500 transition duration-200 ease-in border border-gray-300 rounded-md shadow-md lg:w-40 bg-gray-50 hover:bg-gray-100 focus:outline-none hover:shadow-none focus:shadow-outline-blue focus:border-blue-400">
+                            More
+                            <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="inline w-4 h-4 ml-4 text-gray-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="transform: rotate(360deg);"><path d="M20 8.18V3a1 1 0 0 0-2 0v5.18a3 3 0 0 0 0 5.64V21a1 1 0 0 0 2 0v-7.18a3 3 0 0 0 0-5.64zM19 12a1 1 0 1 1 1-1a1 1 0 0 1-1 1zm-6 2.18V3a1 1 0 0 0-2 0v11.18a3 3 0 0 0 0 5.64V21a1 1 0 0 0 2 0v-1.18a3 3 0 0 0 0-5.64zM12 18a1 1 0 1 1 1-1a1 1 0 0 1-1 1zM6 6.18V3a1 1 0 0 0-2 0v3.18a3 3 0 0 0 0 5.64V21a1 1 0 0 0 2 0v-9.18a3 3 0 0 0 0-5.64zM5 10a1 1 0 1 1 1-1a1 1 0 0 1-1 1z" fill="currentColor"></path></svg>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="flex flex-row items-center lg:ml-auto lg:space-x-3 lg:space-y-0">
+                          <div class="flex items-center">
+                            <p class="flex-shrink-0 text-gray-400">Sort by:</p>
+                            <button type="button" class="relative w-full py-2 pl-4 pr-10 ml-2 text-sm font-semibold text-left text-gray-500 transition duration-200 ease-in bg-transparent border border-transparent rounded-md hover:border-gray-300 lg:w-24 hover:bg-gray-100 focus:outline-none focus:shadow-outline-blue focus:border-blue-400">
+                              All
+                              <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="inline w-5 h-5 ml-4 text-gray-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="transform: rotate(360deg);"><path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6l1.41-1.42z" fill="currentColor"></path></svg>
+                              </div>
+                            </button>
+                          </div>
+                          <div class="flex items-center p-1 space-x-1 rounded-md bg-cool-gray-300">
+                            <div class="flex items-center justify-center w-12 h-8 bg-white rounded-md">
+                              <button type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-5 h-5 text-gray-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="transform: rotate(360deg);"><path d="M12 16c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2M6 16c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m12 12c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2z" fill="currentColor"></path></svg>
+                              </button>
+                            </div>
+
+                            <div class="flex items-center justify-center w-12 h-8 transition duration-200 ease-in rounded-md hover:bg-white">
+                              <button type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-5 h-5 text-gray-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="transform: rotate(360deg);"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z" fill="currentColor"></path></svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <ul class="mt-8 space-y-4 lg:grid lg:grid-cols-2 lg:gap-6 xl:grid-cols-3 xl:gap-8 sm:space-y-0">
+                    <li class="text-center transition duration-150 ease-in-out transform bg-white border-b-4 rounded-lg shadow-sm border-gray-50 hover:scale-105 hover:shadow-xl group hover:border-blue-500">
+                      <div class="float-right mt-4 mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-4 h-4 text-gray-400 transition duration-150 ease-in-out hover:text-gray-600 hover:cursor-pointer" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20" style="transform: rotate(360deg);"><path d="M10.001 7.8a2.2 2.2 0 1 0 0 4.402A2.2 2.2 0 0 0 10 7.8zm0-2.6A2.2 2.2 0 1 0 9.999.8a2.2 2.2 0 0 0 .002 4.4zm0 9.6a2.2 2.2 0 1 0 0 4.402a2.2 2.2 0 0 0 0-4.402z" fill="currentColor"></path></svg>
+                      </div>
+                      <div class="px-6 pt-8 xl:px-8">
+                        <div>
+                          <div class="relative flex items-center justify-center mt-3">
+                            <div class="relative">
+                              <img class="w-40 h-40 mx-auto rounded-full shadow-md" src="https://i.pravatar.cc/320?img=56" alt="">
+                              <div class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 mt-4 mr-4 bg-white rounded-full shadow-md">
+                                <div class="w-3 h-3 border-4 border-blue-600 rounded-full"></div>
+                              </div>
+                            </div>
+                            <div class="absolute border border-white rounded-full w-36 h-36"></div>
+                          </div>
+                          <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="mx-auto">
+                              <h4 class="mt-3 text-base font-bold leading-6 text-center text-blue-900">Joseph González</h4>
+                              <p class="text-sm font-semibold text-center text-gray-400">joseph.gonzalez@mail.com</p>
+                              <div class="flex items-center justify-center my-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-3 h-3 mr-2 text-gray-400" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path stroke="currentColor" stroke-width="2" d="M16 30a14 14 0 1 1 14-14a14 14 0 0 1-14 14zm0-26a12 12 0 1 0 12 12A12 12 0 0 0 16 4z" fill="currentColor"></path><path stroke="currentColor" stroke-width="2" d="M20.59 22L15 16.41V7h2v8.58l5 5.01L20.59 22z" fill="currentColor"></path></svg>
+                              <div class="flex items-center space-x-1">
+                                <span class="flex-shrink-0 w-6 h-1 bg-blue-600 rounded-lg"></span>
+                                <span class="flex-shrink-0 w-6 h-1 bg-indigo-600 rounded-lg"></span>
+                                <span class="flex-shrink-0 w-6 h-1 bg-teal-400 rounded-lg"></span>
+                              </div>
+                              <span class="ml-2 text-xs font-semibold text-gray-400">100%</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="px-6 py-4 transition duration-150 ease-in-out border-t border-gray-200 rounded-bl-lg rounded-br-lg bg-gray-50 group-hover:bg-white">
+                        <p class="text-xs font-bold tracking-wide uppercase text-cool-gray-500">Senior Designer</p>
+                      </div>
+                    </li>
+                    <li class="text-center transition duration-150 ease-in-out transform bg-white border-b-4 rounded-lg shadow-sm border-gray-50 hover:scale-105 hover:shadow-xl group hover:border-blue-500">
+                      <div class="float-right mt-4 mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-4 h-4 text-gray-400 transition duration-150 ease-in-out hover:text-gray-600 hover:cursor-pointer" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20" style="transform: rotate(360deg);"><path d="M10.001 7.8a2.2 2.2 0 1 0 0 4.402A2.2 2.2 0 0 0 10 7.8zm0-2.6A2.2 2.2 0 1 0 9.999.8a2.2 2.2 0 0 0 .002 4.4zm0 9.6a2.2 2.2 0 1 0 0 4.402a2.2 2.2 0 0 0 0-4.402z" fill="currentColor"></path></svg>
+                      </div>
+                      <div class="px-6 pt-8 xl:px-8">
+                        <div>
+                          <div class="relative flex items-center justify-center mt-3">
+                            <div class="relative">
+                              <img class="w-40 h-40 mx-auto rounded-full shadow-md" src="https://i.pravatar.cc/320?img=5" alt="">
+                              <div class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 mt-4 mr-4 bg-white rounded-full shadow-md">
+                                <div class="w-3 h-3 border-4 border-green-400 rounded-full"></div>
+                              </div>
+                            </div>
+                            <div class="absolute border border-white rounded-full w-36 h-36"></div>
+                          </div>
+                          <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="mx-auto">
+                              <h4 class="mt-3 text-base font-bold leading-6 text-center text-blue-900">Jessica Jenkins</h4>
+                              <p class="text-sm font-semibold text-center text-gray-400">jessi.jenkis@mail.com</p>
+                              <div class="flex items-center justify-center my-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-3 h-3 mr-2 text-gray-400" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path stroke="currentColor" stroke-width="2" d="M16 30a14 14 0 1 1 14-14a14 14 0 0 1-14 14zm0-26a12 12 0 1 0 12 12A12 12 0 0 0 16 4z" fill="currentColor"></path><path stroke="currentColor" stroke-width="2" d="M20.59 22L15 16.41V7h2v8.58l5 5.01L20.59 22z" fill="currentColor"></path></svg>
+                              <div class="flex items-center space-x-1">
+                                <span class="flex-shrink-0 w-6 h-1 bg-blue-600 rounded-lg"></span>
+                                <span class="flex-shrink-0 w-6 h-1 bg-indigo-600 rounded-lg"></span>
+                                <span class="relative flex-shrink-0 w-6 h-1 bg-gray-300 rounded-lg">
+                                  <span class="absolute top-0 left-0 flex-shrink-0 h-1 bg-teal-400 rounded-lg" style="width: 27%;"></span>
+                                </span>
+                              </div>
+                              <span class="ml-2 text-xs font-semibold text-gray-400">82%</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="px-6 py-4 transition duration-150 ease-in-out border-t border-gray-200 rounded-bl-lg rounded-br-lg bg-gray-50 group-hover:bg-white">
+                        <p class="text-xs font-bold tracking-wide uppercase text-cool-gray-500">Creative Director</p>
+                      </div>
+                    </li>
+                    <li class="text-center transition duration-150 ease-in-out transform bg-white border-b-4 rounded-lg shadow-sm border-gray-50 hover:scale-105 hover:shadow-xl group hover:border-blue-500">
+                      <div class="float-right mt-4 mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-4 h-4 text-gray-400 transition duration-150 ease-in-out hover:text-gray-600 hover:cursor-pointer" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20" style="transform: rotate(360deg);"><path d="M10.001 7.8a2.2 2.2 0 1 0 0 4.402A2.2 2.2 0 0 0 10 7.8zm0-2.6A2.2 2.2 0 1 0 9.999.8a2.2 2.2 0 0 0 .002 4.4zm0 9.6a2.2 2.2 0 1 0 0 4.402a2.2 2.2 0 0 0 0-4.402z" fill="currentColor"></path></svg>
+                      </div>
+                      <div class="px-6 pt-8 xl:px-8">
+                        <div>
+                          <div class="relative flex items-center justify-center mt-3">
+                            <div class="relative">
+                              <img class="w-40 h-40 mx-auto rounded-full shadow-md" src="https://i.pravatar.cc/320?img=3" alt="">
+                              <div class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 mt-4 mr-4 bg-white rounded-full shadow-md">
+                                <div class="w-3 h-3 border-4 border-blue-600 rounded-full"></div>
+                              </div>
+                            </div>
+                            <div class="absolute border border-white rounded-full w-36 h-36"></div>
+                          </div>
+                          <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="mx-auto">
+                              <h4 class="mt-3 text-base font-bold leading-6 text-center text-blue-900">Nicolas Horn</h4>
+                              <p class="text-sm font-semibold text-center text-gray-400">nicolas.horn@mail.com</p>
+                              <div class="flex items-center justify-center my-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-3 h-3 mr-2 text-gray-400" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path stroke="currentColor" stroke-width="2" d="M16 30a14 14 0 1 1 14-14a14 14 0 0 1-14 14zm0-26a12 12 0 1 0 12 12A12 12 0 0 0 16 4z" fill="currentColor"></path><path stroke="currentColor" stroke-width="2" d="M20.59 22L15 16.41V7h2v8.58l5 5.01L20.59 22z" fill="currentColor"></path></svg>
+                              <div class="flex items-center space-x-1">
+                                <span class="flex-shrink-0 w-6 h-1 bg-blue-600 rounded-lg"></span>
+                                <span class="flex-shrink-0 w-6 h-1 bg-indigo-600 rounded-lg"></span>
+                                <span class="flex-shrink-0 w-6 h-1 bg-gray-300 rounded-lg"></span>
+                              </div>
+                              <span class="ml-2 text-xs font-semibold text-gray-400">66%</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="px-6 py-4 transition duration-150 ease-in-out border-t border-gray-200 rounded-bl-lg rounded-br-lg bg-gray-50 group-hover:bg-white">
+                        <p class="text-xs font-bold tracking-wide uppercase text-cool-gray-500">UX Engineer</p>
+                      </div>
+                    </li>
+                    <li class="text-center transition duration-150 ease-in-out transform bg-white border-b-4 rounded-lg shadow-sm border-gray-50 hover:scale-105 hover:shadow-xl group hover:border-blue-500">
+                      <div class="float-right mt-4 mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-4 h-4 text-gray-400 transition duration-150 ease-in-out hover:text-gray-600 hover:cursor-pointer" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20" style="transform: rotate(360deg);"><path d="M10.001 7.8a2.2 2.2 0 1 0 0 4.402A2.2 2.2 0 0 0 10 7.8zm0-2.6A2.2 2.2 0 1 0 9.999.8a2.2 2.2 0 0 0 .002 4.4zm0 9.6a2.2 2.2 0 1 0 0 4.402a2.2 2.2 0 0 0 0-4.402z" fill="currentColor"></path></svg>
+                      </div>
+                      <div class="px-6 pt-8 xl:px-8">
+                        <div>
+                          <div class="relative flex items-center justify-center mt-3">
+                            <div class="relative">
+                              <img class="w-40 h-40 mx-auto rounded-full shadow-md" src="https://i.pravatar.cc/320?img=10" alt="">
+                              <div class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 mt-4 mr-4 bg-white rounded-full shadow-md">
+                                <div class="w-3 h-3 border-4 border-blue-600 rounded-full"></div>
+                              </div>
+                            </div>
+                            <div class="absolute border border-white rounded-full w-36 h-36"></div>
+                          </div>
+                          <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="mx-auto">
+                              <h4 class="mt-3 text-base font-bold leading-6 text-center text-blue-900">Alice McKenzie</h4>
+                              <p class="text-sm font-semibold text-center text-gray-400">alice.mc.k@mail.com</p>
+                              <div class="flex items-center justify-center my-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-3 h-3 mr-2 text-gray-400" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path stroke="currentColor" stroke-width="2" d="M16 30a14 14 0 1 1 14-14a14 14 0 0 1-14 14zm0-26a12 12 0 1 0 12 12A12 12 0 0 0 16 4z" fill="currentColor"></path><path stroke="currentColor" stroke-width="2" d="M20.59 22L15 16.41V7h2v8.58l5 5.01L20.59 22z" fill="currentColor"></path></svg>
+                              <div class="flex items-center space-x-1">
+                                <span class="flex-shrink-0 w-6 h-1 bg-blue-600 rounded-lg"></span>
+                                <span class="flex-shrink-0 w-6 h-1 bg-indigo-600 rounded-lg"></span>
+                                <span class="flex-shrink-0 w-6 h-1 bg-gray-300 rounded-lg"></span>
+                              </div>
+                              <span class="ml-2 text-xs font-semibold text-gray-400">66%</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="px-6 py-4 transition duration-150 ease-in-out border-t border-gray-200 rounded-bl-lg rounded-br-lg bg-gray-50 group-hover:bg-white">
+                        <p class="text-xs font-bold tracking-wide uppercase text-cool-gray-500">UX Engineer</p>
+                      </div>
+                    </li>
+                    <li class="text-center transition duration-150 ease-in-out transform bg-white border-b-4 rounded-lg shadow-sm border-gray-50 hover:scale-105 hover:shadow-xl group hover:border-blue-500">
+                      <div class="float-right mt-4 mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-4 h-4 text-gray-400 transition duration-150 ease-in-out hover:text-gray-600 hover:cursor-pointer" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20" style="transform: rotate(360deg);"><path d="M10.001 7.8a2.2 2.2 0 1 0 0 4.402A2.2 2.2 0 0 0 10 7.8zm0-2.6A2.2 2.2 0 1 0 9.999.8a2.2 2.2 0 0 0 .002 4.4zm0 9.6a2.2 2.2 0 1 0 0 4.402a2.2 2.2 0 0 0 0-4.402z" fill="currentColor"></path></svg>
+                      </div>
+                      <div class="px-6 pt-8 xl:px-8">
+                        <div>
+                          <div class="relative flex items-center justify-center mt-3">
+                            <div class="relative">
+                              <div class="flex items-center justify-center w-40 h-40 mx-auto rounded-full shadow-md bg-blue-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-10 h-10 text-blue-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="transform: rotate(360deg);"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></g></svg>
+                              </div>
+                              <div class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 mt-4 mr-4 bg-white rounded-full shadow-md">
+                                <div class="w-3 h-3 border-4 border-blue-600 rounded-full"></div>
+                              </div>
+                            </div>
+                            <div class="absolute border border-white rounded-full w-36 h-36"></div>
+                          </div>
+                          <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="mx-auto">
+                              <h4 class="mt-3 text-base font-bold leading-6 text-center text-blue-900">Jack Jefferson</h4>
+                              <p class="text-sm font-semibold text-center text-gray-400">jj@mail.com</p>
+                              <div class="flex items-center justify-center my-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-3 h-3 mr-2 text-gray-400" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path stroke="currentColor" stroke-width="2" d="M16 30a14 14 0 1 1 14-14a14 14 0 0 1-14 14zm0-26a12 12 0 1 0 12 12A12 12 0 0 0 16 4z" fill="currentColor"></path><path stroke="currentColor" stroke-width="2" d="M20.59 22L15 16.41V7h2v8.58l5 5.01L20.59 22z" fill="currentColor"></path></svg>
+                              <div class="flex items-center space-x-1">
+                                <span class="flex-shrink-0 w-6 h-1 bg-blue-600 rounded-lg"></span>
+                                <span class="flex-shrink-0 w-6 h-1 bg-indigo-600 rounded-lg"></span>
+                                <span class="flex-shrink-0 w-6 h-1 bg-gray-300 rounded-lg"></span>
+                              </div>
+                              <span class="ml-2 text-xs font-semibold text-gray-400">66%</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="px-6 py-4 transition duration-150 ease-in-out border-t border-gray-200 rounded-bl-lg rounded-br-lg bg-gray-50 group-hover:bg-white">
+                        <p class="text-xs font-bold tracking-wide uppercase text-cool-gray-500">Senior Copywriter</p>
+                      </div>
+                    </li>
+                    <li class="text-center transition duration-150 ease-in-out transform bg-white border-b-4 rounded-lg shadow-sm border-gray-50 hover:scale-105 hover:shadow-xl group hover:border-blue-500">
+                      <div class="float-right mt-4 mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-4 h-4 text-gray-400 transition duration-150 ease-in-out hover:text-gray-600 hover:cursor-pointer" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20" style="transform: rotate(360deg);"><path d="M10.001 7.8a2.2 2.2 0 1 0 0 4.402A2.2 2.2 0 0 0 10 7.8zm0-2.6A2.2 2.2 0 1 0 9.999.8a2.2 2.2 0 0 0 .002 4.4zm0 9.6a2.2 2.2 0 1 0 0 4.402a2.2 2.2 0 0 0 0-4.402z" fill="currentColor"></path></svg>
+                      </div>
+                      <div class="px-6 pt-8 xl:px-8">
+                        <div>
+                          <div class="relative flex items-center justify-center mt-3">
+                            <div class="relative">
+                              <img class="w-40 h-40 mx-auto rounded-full shadow-md" src="https://i.pravatar.cc/320?img=16" alt="">
+                              <div class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 mt-4 mr-4 bg-white rounded-full shadow-md">
+                                <div class="w-3 h-3 border-4 border-blue-600 rounded-full"></div>
+                              </div>
+                            </div>
+                            <div class="absolute border border-white rounded-full w-36 h-36"></div>
+                          </div>
+                          <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="mx-auto">
+                              <h4 class="mt-3 text-base font-bold leading-6 text-center text-blue-900">Anastacia Groetske</h4>
+                              <p class="text-sm font-semibold text-center text-gray-400">anastacia.g@mail.com</p>
+                              <div class="flex items-center justify-center my-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-3 h-3 mr-2 text-gray-400" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path stroke="currentColor" stroke-width="2" d="M16 30a14 14 0 1 1 14-14a14 14 0 0 1-14 14zm0-26a12 12 0 1 0 12 12A12 12 0 0 0 16 4z" fill="currentColor"></path><path stroke="currentColor" stroke-width="2" d="M20.59 22L15 16.41V7h2v8.58l5 5.01L20.59 22z" fill="currentColor"></path></svg>
+                              <div class="flex items-center space-x-1">
+                                <span class="flex-shrink-0 w-6 h-1 bg-blue-600 rounded-lg"></span>
+                                <span class="flex-shrink-0 w-6 h-1 bg-indigo-600 rounded-lg"></span>
+                                <span class="flex-shrink-0 w-6 h-1 bg-gray-300 rounded-lg"></span>
+                              </div>
+                              <span class="ml-2 text-xs font-semibold text-gray-400">66%</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="px-6 py-4 transition duration-150 ease-in-out border-t border-gray-200 rounded-bl-lg rounded-br-lg bg-gray-50 group-hover:bg-white">
+                        <p class="text-xs font-bold tracking-wide uppercase text-cool-gray-500">Art Director</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/4">
+              <div class="h-full py-6 bg-white shadow">
+                <div class="px-6 pb-8 border-b border-gray-200">
+                  <span class="text-xs font-bold tracking-wide uppercase text-cool-gray-500">Selected</span>
+                  <h3 class="text-xl font-semibold leading-8 text-blue-900">Design Team</h3>
+                </div>
+
+                <div class="px-6 pt-6 pb-8 border-b border-gray-200">
+                  <div class="text-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="inline w-5 h-5 text-gray-400 transition duration-150 ease-in-out hover:text-gray-600 hover:cursor-pointer" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="transform: rotate(360deg);"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83a2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33a1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2a2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0a2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2a2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83a2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2a2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0a2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2a2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></g></svg>
+                  </div>
+
+                  <div class="relative flex items-center justify-center w-20 h-20 mx-auto mb-6 space-x-2 lg:space-x-3 lg:w-32 lg:h-32 xl:w-48 xl:h-48">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="flex-shrink-0 w-5 h-5 text-gray-400 transition duration-150 ease-in-out hover:text-gray-600 hover:cursor-pointer" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512" style="transform: rotate(360deg);"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M328 112L184 256l144 144"></path></svg>
+
+                    <div class="flex items-center justify-center flex-shrink-0 w-20 h-20 bg-gray-100 rounded-full shadow-xl lg:w-32 lg:h-32 xl:w-48 xl:h-48">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-20 h-20 lg:w-40 lg:h-40">
+                        <defs>
+                          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#16bdca" />
+                            <stop offset="100%" stop-color="#1c64f2" />
+                          </linearGradient>
+                        </defs>
+                        <circle fill="none" stroke="#FFF" cx="18" cy="18" r="16" stroke-width="0.8"></circle>
+                        <path class="score-circle-stroke" fill="none" stroke="url(#gradient)" stroke-width="1" stroke-linecap="round" stroke-dasharray="74, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                      </svg>
+
+                      <div class="absolute flex items-center justify-center w-20 h-20 p-3 rounded-full shadow-xl lg:w-24 lg:h-24">
+                        <div class="absolute flex items-center justify-center bg-white border border-gray-100 rounded-full shadow lg:w-20 lg:h-20">
+                          <div class="flex flex-col items-center justify-center">
+                            <p class="text-xs font-semibold text-gray-400 uppercase">Time log</p>
+                            <div class="text-xl font-semibold">74<span class="text-xs">%</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="flex-shrink-0 w-5 h-5 text-gray-400 transition duration-150 ease-in-out hover:text-gray-600 hover:cursor-pointer" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512" style="transform: rotate(360deg);"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144l-144 144"></path></svg>
+                  </div>
+
+                  <h3 class="text-xl font-semibold leading-8 text-blue-900">Projects</h3>
+
+                  <div class="mt-6 xl:grid xl:grid-cols-2 xl:gap-6">
+                    <div class="p-4 bg-gray-100 rounded-md">
+                      <span class="text-xs font-semibold text-gray-400 uppercase">Total</span>
+                      <div class="flex items-center">
+                        <span class="w-1 h-4 mr-2 bg-blue-700 rounded-sm"></span>
+                        <span class="text-xl font-bold text-blue-900">148</span>
+                      </div>
+                    </div>
+
+                    <div class="p-4 bg-gray-100 rounded-md">
+                      <span class="text-xs font-semibold text-gray-400 uppercase">Completed</span>
+                      <div class="flex items-center">
+                        <span class="w-1 h-4 mr-2 bg-green-500 rounded-sm"></span>
+                        <span class="text-xl font-bold text-blue-900">56</span>
+                      </div>
+                    </div>
+
+                    <div class="p-4 bg-gray-100 rounded-md">
+                      <span class="text-xs font-semibold text-gray-400 uppercase">In progress</span>
+                      <div class="flex items-center">
+                        <span class="w-1 h-4 mr-2 bg-teal-500 rounded-sm"></span>
+                        <span class="text-xl font-bold text-blue-900">76</span>
+                      </div>
+                    </div>
+
+                    <div class="p-4 bg-gray-100 rounded-md">
+                      <span class="text-xs font-semibold text-gray-400 uppercase">Waiting</span>
+                      <div class="flex items-center">
+                        <span class="w-1 h-4 mr-2 bg-orange-400 rounded-sm"></span>
+                        <span class="text-xl font-bold text-blue-900">16</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-6 pt-6 pb-8">
+                  <div class="flex flex-col p-3 text-center bg-gray-100 rounded-md lg:flex-row lg:items-center lg:text-left">
+                    <div class="relative flex items-center justify-center flex-shrink-0 w-10 h-10 mx-auto mb-3 bg-blue-500 rounded-md lg:mr-3 lg:mb-0 lg:ml-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="w-5 h-5 text-white" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="transform: rotate(360deg);"><path d="M20 2H4c-1.103 0-2 .894-2 1.992v12.016C2 17.106 2.897 18 4 18h3v4l6.351-4H20c1.103 0 2-.894 2-1.992V3.992A1.998 1.998 0 0 0 20 2zm-6 11H7v-2h7v2zm3-4H7V7h10v2z" fill="currentColor"></path></svg>
+                      <div class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 -mt-2 -mr-1 bg-white rounded-full shadow-md">
+                        <div class="w-3 h-3 border-4 border-green-400 rounded-full"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="text-xs font-semibold leading-tight text-gray-400 uppercase">In progress</span>
+                      <div class="font-bold text-blue-900">
+                        <p class="mb-0 text-sm leading-tight">Internal messages
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" class="inline w-5 h-5 mx-1 text-gray-400 transition duration-150 ease-in-out hover:text-gray-600 hover:cursor-pointer" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="transform: rotate(360deg);"><path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6l1.41-1.42z" fill="currentColor"></path></svg>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+  </body>
+</html>
