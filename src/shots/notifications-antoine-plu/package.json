@@ -1,0 +1,22 @@
+{
+  "name": "twibbble-shot",
+  "version": "1.0.0",
+  "description": "A simple tailwind starter project with parcel",
+  "scripts": {
+    "clean": "rm -rf dist .cache",
+    "dev": "yarn clean && parcel serve src/**/*.html",
+    "prod": "parcel build src/**/*.html"
+  },
+  "repository": "",
+  "author": "Maxime Laforet",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.0.0-nightly.478"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "parcel-plugin-inliner": "^1.0.14",
+    "postcss": "^8.2.1",
+    "tailwindcss": "^2.0.1"
+  }
+}
